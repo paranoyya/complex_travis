@@ -52,7 +52,7 @@ SCENARIO("complex operator*","[oper*]"){
 }
 
 SCENARIO("complex operator/","[oper/]"){
-    Complex complex1(2,10), complex2(1,5), complex3(2,0);
+    Complex complex1(-23,2), complex2(4,2), complex3(-4.4,2.7);
     REQUIRE((complex1/complex2 == complex3) == true);
 }
 
@@ -75,7 +75,7 @@ SCENARIO("complex operator *=","[oper-*=]"){
 }
 
 SCENARIO("complex operator /=","[oper/=]"){
-    Complex complex1(2,10), complex2(1,5), complex3(2,0);
+    Complex complex1(-23,2), complex2(4,2), complex3(-4.4,2.7);
     complex1 /= complex2;
     REQUIRE((complex1 == complex3) == true);
 }
