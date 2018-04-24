@@ -46,7 +46,7 @@ Complex Complex::operator*(const Complex& other){
     return Complex(Re*other.Re - Im*other.Im, Im*other.Re + Re*other.Im);
 }
 Complex Complex::operator/(const Complex& other){
-    return Complex((Re*other.Re + Im*other.Im)/(other.Re*other.Re + other.Im*other.Im),(Re*other.Im - Im*other.Re)/(other.Re*other.Re + other.Im*other.Im));
+    return Complex((Re*other.Re + Im*other.Im)/(other.Re*other.Re + other.Im*other.Im),(-Re*other.Im + Im*other.Re)/(other.Re*other.Re + other.Im*other.Im));
 }
 Complex Complex::operator+=(const Complex& other){
     Re += other.Re;
@@ -68,7 +68,7 @@ Complex Complex::operator*=(const Complex& other){
 Complex Complex::operator/=(const Complex& other){
     double tmp;
     tmp = (Re*other.Re + Im*other.Im)/(other.Re*other.Re + other.Im*other.Im);
-    Im =  (Re*other.Im - Im*other.Re)/(other.Re*other.Re + other.Im*other.Im);
+    Im =  (-Re*other.Im + Im*other.Re)/(other.Re*other.Re + other.Im*other.Im);
     Re = tmp;
     return Complex(Re,Im);
 }
